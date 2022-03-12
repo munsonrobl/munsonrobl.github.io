@@ -1,6 +1,6 @@
 # change the followings to match your Github username and repo name
-baseurl: "/tailpages" # the name of your github repo
-url: "https://harrywang.github.io" # the url of your github pages
+baseurl: "munsonrobl.github.io" # the name of your github repo
+url: "https://munsonrobl.github.io" # the url of your github pages
 
 # site information used in page title, meta data etc.
 title: "Tailpages: Tailwind + Github Pages"
@@ -10,8 +10,8 @@ description: A Github Pages (Jekyll) template based on TailwindCSS
 theme-color: indigo # indigo|yellow|pink|green|stone|
 
 # homepage information
-author: Satoshi Nakamoto
-author-bio: Creator of Bitcoin  # change to false to hide
+author: Rob Munson
+author-bio: Lead Softwawre Engineer  # change to false to hide
 author-image: 279.png  # file must be in the /assets/img/ folder
 
 # navigation menu
@@ -35,12 +35,12 @@ medium: false
 google-scholar: false
 email: false
 
-# footer information
-footer-msg: "Powered by Tailpages"
-footer-msg-link: https://github.com/harrywang/tailpages
+# # footer information
+# footer-msg: "Powered by Tailpages"
+# footer-msg-link: https://github.com/harrywang/tailpages
 
-# google analytics
-google-analytics: G-WCRC1TC2V5
+# # google analytics
+# google-analytics: G-WCRC1TC2V5
 
 # jekyll plugins - no need to change
 plugins:
