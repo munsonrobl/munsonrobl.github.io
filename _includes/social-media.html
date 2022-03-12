@@ -62,18 +62,29 @@
         </a>
         {% endif %}
 
-        {% if site.google-scholar %}
-        <a href="{{site.google-scholar}}" target="_blank">
+        {% if site.strava %}
+        <a href="{{site.strava}}" target="_blank">
           <button
             class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
             type="button">
-            <i class="fas fa-graduation-cap"></i>
+            <i class="fab fa-strava"></i>
           </button>
         </a>
         {% endif %}
 
+        {% if site.banana %}
+        <a href="{{site.banana}}" target="_blank">
+          <button
+            class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button">
+            <i class="fab fa-banana"></i>
+          </button>
+        </a>
+        {% endif %}
+
+
         {% if site.email %}
-        <a href="{{site.email}}" target="_blank">
+        <a href="mailto:{{site.email}}" target="_blank">
           <button
             class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
             type="button">
