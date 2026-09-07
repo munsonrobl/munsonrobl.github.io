@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ink: 13 26 48;
+  --color-muted: 82 96 117;
+  --color-paper: 245 247 251;
+  --color-surface: 255 255 255;
+  --color-line: 209 216 228;
+  --color-accent: 31 80 209;
+  --color-accent-soft: 226 234 255;
+  color: rgb(var(--color-ink));
+  background: rgb(var(--color-paper));
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    linear-gradient(90deg, transparent calc(50% - 38rem), rgba(13, 26, 48, 0.035) calc(50% - 38rem), rgba(13, 26, 48, 0.035) calc(50% - 38rem + 1px), transparent calc(50% - 38rem + 1px)),
+    rgb(var(--color-paper));
+}
+
+button, a { -webkit-tap-highlight-color: transparent; }
+
+a { color: inherit; }
+
+::selection {
+  color: white;
+  background: rgb(var(--color-accent));
+}
+
+:focus-visible {
+  outline: 3px solid rgb(var(--color-accent) / 0.38);
+  outline-offset: 3px;
+}
+
+.page-shell { @apply mx-auto w-full max-w-page px-5 sm:px-8 lg:px-10; }
+
+.section-kicker { @apply font-mono text-xs font-medium uppercase tracking-[0.18em] text-accent; }
+
+.section-heading { @apply mt-4 max-w-3xl text-3xl font-semibold leading-tight tracking-[-0.035em] text-ink sm:text-4xl; }
+
+.section-rule { @apply border-t border-line; }
+
+.text-balance { text-wrap: balance; }
+
+.link-arrow svg { transition: transform 180ms ease; }
+.link-arrow:hover svg { transform: translate(3px, -3px); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

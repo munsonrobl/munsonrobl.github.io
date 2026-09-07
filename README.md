@@ -1,10 +1,23 @@
-# About
+# Robert Munson — Interactive Resume
 
-Jekyll + Tailwind + GitHub pages. https://munsonrobl.github.io
+A local-first interactive professional resume built with Vue 3, Vite, TypeScript, and Tailwind CSS. Node.js 22 is recommended (see `.nvmrc`).
 
-Key features are:
+## Local development
 
-- Elegant typography via [TailwindCSS Typography plugin](https://tailwindcss.com/docs/typography-plugin) and [Inter font](https://rsms.me/inter/)
-- Markdown support for content authoring (static pages and blogs)
-- Code highlighting and styling via [highlight.js](https://highlightjs.org/) (see [code example](https://harrywang.me/2022/01/18/tailpages-tutorial-technical.html))
-- Table of Contents support via [jekyll-toc](https://github.com/allejo/jekyll-toc) (see an [example](http://harrywang.me/2022/02/08/python-cheatsheet.html))
+```bash
+npm install
+npm run dev
+```
+
+The terminal prints the local URL, usually `http://localhost:5173`.
+
+## Checks
+
+```bash
+npm run typecheck
+npm run build
+```
+
+Resume content is organized in `src/data`, shared types live in `src/types`, and presentation components live in `src/components`.
+
+The downloadable resume URL in `src/data/links.ts` is intentionally blank until a curated resume is available. The education section is similarly reserved until exact degree and institution details are confirmed.
