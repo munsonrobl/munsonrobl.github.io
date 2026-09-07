@@ -3,9 +3,11 @@ import { capabilityGroups, selectedTechnologies } from '../data/capabilities'
 </script>
 
 <template>
-  <section class="page-shell capabilities-section" aria-labelledby="capabilities-heading">
-    <div class="section-topline">
-      <h2 id="capabilities-heading">Skills</h2>
+  <section id="skills" class="page-shell capabilities-section" aria-labelledby="capabilities-heading">
+    <div class="section-divider"><span>Capabilities</span></div>
+    <div class="section-heading compact-heading">
+      <p class="section-kicker">Working range</p>
+      <h2 id="capabilities-heading">Depth where it matters. Range where it helps.</h2>
     </div>
 
     <div class="capability-grid">
@@ -18,7 +20,7 @@ import { capabilityGroups, selectedTechnologies } from '../data/capabilities'
     </div>
 
     <div class="selected-tech" aria-labelledby="selected-tech-heading">
-      <h3 id="selected-tech-heading">Technologies</h3>
+      <h3 id="selected-tech-heading">Selected technology record</h3>
       <p>{{ selectedTechnologies.join(' · ') }}</p>
     </div>
   </section>

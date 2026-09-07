@@ -3,7 +3,8 @@ export type Perspective = 'leadership' | 'business' | 'technical'
 export interface PerspectiveMeta {
   id: Perspective
   label: string
-
+  heading: string
+  intro: string[]
 }
 
 export interface PerspectiveContent {

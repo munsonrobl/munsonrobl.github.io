@@ -7,31 +7,46 @@ import CapabilitiesSection from './components/CapabilitiesSection.vue'
 import ExperienceTimeline from './components/ExperienceTimeline.vue'
 import SiteFooter from './components/SiteFooter.vue'
 import type { Perspective } from './types/resume'
+
 const activePerspective = ref<Perspective>('leadership')
 </script>
 
 <template>
   <a href="#main-content" class="skip-link">Skip to content</a>
-  <main id="main-content" tabindex="-1">
-    <HeroSection />
-    <div id="work" class="work-nav">
-      <div class="page-shell"><PerspectiveTabs v-model="activePerspective" /></div>
-    </div>
-    <section class="page-shell work-section" aria-label="Work examples">
-      <div id="perspective-panel" role="tabpanel" :aria-labelledby="`tab-${activePerspective}`" tabindex="0">
-        <SelectedImpact :perspective="activePerspective" />
-      </div>
-    </section>
-    <ExperienceTimeline />
-    <CapabilitiesSection />
-    <section class="approach-surface" aria-labelledby="approach-heading">
-      <div class="page-shell approach-section">
-        <h2 id="approach-heading">How I lead</h2>
-        <div>
-          <p class="body-copy">I develop engineering leads and managers, connect technical choices to product needs, and step into delivery when teams need support. My hands-on foundation and experience running a business keep architecture, customer experience, and operating costs in the same conversation.</p>
+  <div class="resume-page">
+    <header class="site-header page-shell">
+      <a class="identity" href="#top" aria-label="Robert Munson, home">
+        <span class="identity-mark" aria-hidden="true">RM</span>
+        <span>Robert Munson</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <HeroSection />
+
+      <section id="work" class="work-section page-shell" aria-labelledby="work-heading">
+        <div class="section-divider"><span>Selected work</span></div>
+        <div class="section-heading">
+          <p class="section-kicker">Three perspectives · one career</p>
+          <h2 id="work-heading">The work changes with the lens.</h2>
+          <p>Leadership, engineering, and business are not separate chapters. They are different ways of reading the same decisions and outcomes.</p>
         </div>
-      </div>
-    </section>
-  </main>
-  <SiteFooter />
+        <PerspectiveTabs v-model="activePerspective" />
+        <div id="perspective-panel" role="tabpanel" :aria-labelledby="`tab-${activePerspective}`" tabindex="0">
+          <SelectedImpact :perspective="activePerspective" />
+        </div>
+      </section>
+
+      <ExperienceTimeline />
+      <CapabilitiesSection />
+    </main>
+
+    <SiteFooter />
+  </div>
 </template>
