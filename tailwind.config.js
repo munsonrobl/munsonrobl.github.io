@@ -1,45 +1,24 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-
-module.exports = {
-  content: [
-    './**/*.html'
-  ],
-  darkMode: 'media',
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      typography: {
-        DEFAULT: {
-          css: {
-            pre: {
-              padding: "0",
-              color: "#1F2933",
-              backgroundColor: "#F3F3F3"
-            },
-            code: {
-              padding: "0.2em 0.4em",
-              backgroundColor: "#F3F3F3",
-              color: "#DD1144",
-              fontWeight: "400",
-              "border-radius": "0.25rem"
-            },
-            "code::before": false,
-            "code::after": false,
-            "blockquote p:first-of-type::before": false,
-            "blockquote p:last-of-type::after": false,
-          },
-        },
+      colors: {
+        ink: 'rgb(var(--color-ink) / <alpha-value>)',
+        muted: 'rgb(var(--color-muted) / <alpha-value>)',
+        paper: 'rgb(var(--color-paper) / <alpha-value>)',
+        surface: 'rgb(var(--color-surface) / <alpha-value>)',
+        line: 'rgb(var(--color-line) / <alpha-value>)',
+        accent: 'rgb(var(--color-accent) / <alpha-value>)',
+        'accent-soft': 'rgb(var(--color-accent-soft) / <alpha-value>)',
       },
+      maxWidth: { page: '76rem' },
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
+      boxShadow: { panel: '0 24px 70px rgba(9, 20, 43, 0.10)' },
     },
   },
-
-  variants: {
-    extend: {},
-  },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
-
+  plugins: [],
 }
