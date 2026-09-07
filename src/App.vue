@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import HeroSection from './components/HeroSection.vue'
 import PerspectiveTabs from './components/PerspectiveTabs.vue'
 import SelectedImpact from './components/SelectedImpact.vue'
+import CapabilitiesSection from './components/CapabilitiesSection.vue'
 import ExperienceTimeline from './components/ExperienceTimeline.vue'
 import SiteFooter from './components/SiteFooter.vue'
 import type { Perspective } from './types/resume'
@@ -22,10 +23,13 @@ const activePerspective = ref<Perspective>('leadership')
       </div>
     </section>
     <ExperienceTimeline />
-    <section class="page-shell approach-section" aria-labelledby="approach-heading">
-      <h2 id="approach-heading">How I lead</h2>
-      <div>
-        <p class="body-copy">I develop engineering leads and managers, connect technical choices to product needs, and step into delivery when teams need support. My hands-on foundation and experience running a business keep architecture, customer experience, and operating costs in the same conversation.</p>
+    <CapabilitiesSection />
+    <section class="approach-surface" aria-labelledby="approach-heading">
+      <div class="page-shell approach-section">
+        <h2 id="approach-heading">How I lead</h2>
+        <div>
+          <p class="body-copy">I develop engineering leads and managers, connect technical choices to product needs, and step into delivery when teams need support. My hands-on foundation and experience running a business keep architecture, customer experience, and operating costs in the same conversation.</p>
+        </div>
       </div>
     </section>
   </main>
