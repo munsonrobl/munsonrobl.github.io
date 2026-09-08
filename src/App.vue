@@ -3,11 +3,13 @@ import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import Signal from './designs/Signal.vue'
 import Nocturne from './designs/Nocturne.vue'
 import Monument from './designs/Monument.vue'
+import Folio from './designs/Folio.vue'
 
 const designs = [
   { id: 'signal', name: 'Signal', component: Signal, color: '#244be5' },
   { id: 'nocturne', name: 'Nocturne', component: Nocturne, color: '#211b27' },
   { id: 'monument', name: 'Monument', component: Monument, color: '#eee9de' },
+  { id: 'folio', name: 'Folio', component: Folio, color: '#fdfdfc' },
 ] as const
 type Design = typeof designs[number]['id']
 function requestedDesign(): Design {
