@@ -18,11 +18,11 @@ npm run typecheck
 npm run build
 ```
 
-Resume content is organized in `src/data`, shared types live in `src/types`, and presentation components live in `src/components`.
+Source career records are retained in `src/data`; the editorial composition and condensed narrative live in `src/App.vue`, with responsive typography and layout in `src/styles.css`.
 
-Education is omitted until verified details are available. Contact includes an unavailable résumé placeholder until a real document is supplied. The private venture remains anonymous; its 2022 launch and operating scope are supplied by the owner. No unsupported founding, profitability, or end-date claims are made.
+Education is omitted until verified details are available. A résumé download appears only when a real document URL is supplied in `src/data/links.ts`. The private venture remains anonymous; its 2022 launch, co-founding, profitability, healthcare audience, and operating scope are supplied by the owner.
 
-Selected-work tabs change only their panel. The introduction and experience history remain stable. Native disclosures preserve the full Infotech promotion and technical history.
+The editorial folio replaces the previous design selector, perspective tabs, repeated section headings, and capability grids. Leadership, technical work, and business experience appear in one narrative, with the private venture alongside Infotech on desktop and in reading order on mobile. Native keyboard-accessible disclosures preserve all seven Infotech roles and technical delivery detail. Email and LinkedIn links remain available.
 
 ## Project scope
 
