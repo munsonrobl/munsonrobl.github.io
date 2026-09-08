@@ -4,10 +4,10 @@ import { capabilityGroups, selectedTechnologies } from '../data/capabilities'
 
 <template>
   <section id="skills" class="page-shell capabilities-section" aria-labelledby="capabilities-heading">
-    <div class="section-divider"><span>Capabilities</span></div>
-    <div class="section-heading compact-heading">
-      <p class="section-kicker">Working range</p>
-      <h2 id="capabilities-heading">Depth where it matters. Range where it helps.</h2>
+    <div class="section-heading capabilities-heading">
+      <p>Capabilities</p>
+      <h2 id="capabilities-heading">Working range</h2>
+      <span>Organizational leadership grounded in technical practice and direct business ownership.</span>
     </div>
 
     <div class="capability-grid">

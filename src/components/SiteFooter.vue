@@ -5,11 +5,10 @@ import ArrowIcon from './ArrowIcon.vue'
 
 <template>
   <footer id="contact" class="contact-section page-shell" aria-labelledby="contact-heading">
-      <div class="section-divider"><span>Contact</span></div>
       <div class="contact-grid">
         <div>
-          <p class="section-kicker">Based in Gainesville, Florida</p>
-          <h2 id="contact-heading">Let’s compare notes.</h2>
+          <p>Gainesville, Florida</p>
+          <h2 id="contact-heading">Contact</h2>
         </div>
       <div class="contact-links">
         <a :href="externalLinks.linkedin" target="_blank" rel="noreferrer">LinkedIn <ArrowIcon /></a>
