@@ -4,17 +4,19 @@ import Signal from './designs/Signal.vue'
 import Nocturne from './designs/Nocturne.vue'
 import Monument from './designs/Monument.vue'
 import Folio from './designs/Folio.vue'
+import Accord from './designs/Accord.vue'
 
 const designs = [
   { id: 'signal', name: 'Signal', component: Signal, color: '#244be5' },
   { id: 'nocturne', name: 'Nocturne', component: Nocturne, color: '#211b27' },
   { id: 'monument', name: 'Monument', component: Monument, color: '#eee9de' },
   { id: 'folio', name: 'Folio', component: Folio, color: '#fdfdfc' },
+  { id: 'accord', name: 'Accord', component: Accord, color: '#1c2c43' },
 ] as const
 type Design = typeof designs[number]['id']
 function requestedDesign(): Design {
   const value = new URLSearchParams(window.location.search).get('design')
-  return designs.find(design => design.id === value)?.id ?? 'signal'
+  return designs.find(design => design.id === value)?.id ?? 'accord'
 }
 const selected = ref<Design>(requestedDesign())
 const active = computed(() => designs.find(design => design.id === selected.value)!)
