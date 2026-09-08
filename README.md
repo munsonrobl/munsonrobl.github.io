@@ -18,11 +18,17 @@ npm run typecheck
 npm run build
 ```
 
-Source career records are retained in `src/data`; the editorial composition and condensed narrative live in `src/App.vue`, with responsive typography and layout in `src/styles.css`.
+Source career records and the shared narrative are retained in `src/data`. `src/App.vue` selects between three independent compositions in `src/designs`, with responsive typography and layout in `src/styles.css`.
 
 Education is omitted until verified details are available. A résumé download appears only when a real document URL is supplied in `src/data/links.ts`. The private venture remains anonymous; its 2022 launch, co-founding, profitability, healthcare audience, and operating scope are supplied by the owner.
 
-The editorial folio replaces the previous design selector, perspective tabs, repeated section headings, and capability grids. Leadership, technical work, and business experience appear in one narrative, with the private venture alongside Infotech on desktop and in reading order on mobile. Native keyboard-accessible disclosures preserve all seven Infotech roles and technical delivery detail. Email and LinkedIn links remain available.
+The approved editorial folio is preserved on `codex/editorial-folio` at commit `58075b0`. This round lives on `codex/design-round-5` and provides three separately composed designs, selected using the comparison bar or the URL:
+
+- `?design=signal`: cobalt and white, Avenir-led typography, a sticky identity column, and an expandable career record.
+- `?design=nocturne`: aubergine and peach, monospaced text with light display type, a full-width work index, and a contrasting business spread.
+- `?design=monument`: ivory and vermilion, condensed display lettering, and a date-led chronology.
+
+All designs retain the same substantive career story, native keyboard-accessible disclosures for all seven Infotech roles and technical delivery detail, the private education business, earlier employers, and contact links. No animation is required. Layouts adapt for mobile, and the active design can be linked directly.
 
 ## Project scope
 
