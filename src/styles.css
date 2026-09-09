@@ -17,8 +17,11 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
 .muted { color: var(--muted); }
 .role { font-size: .875rem; margin-top: 8px; }
 .contact-links { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-size: .875rem; }
-.contact-links a { padding-block: 8px; }
+.contact-links a { display: inline-flex; align-items: center; gap: 6px; padding-block: 8px; }
 .contact-links a span { margin-left: 5px; }
+.contact-links .resume-link-placeholder { display: inline-flex; align-items: center; gap: 6px; padding-block: 8px; opacity: .62; cursor: not-allowed; }
+.contact-links .resume-link-placeholder span { margin-left: 0; }
+.contact-icon { display: block; width: 1rem; height: 1rem; flex: 0 0 1rem; }
 .design-picker { min-height: 50px; position: sticky; top: 0; z-index: 20; display: flex; align-items: stretch; justify-content: center; background: #f8f8f8; color: #292929; border-bottom: 1px solid #d8d8d8; }
 .design-picker > span { align-self: center; font-size: .8125rem; color: #676767; margin-right: 34px; }
 .design-picker button { border: 0; border-bottom: 2px solid transparent; background: none; padding: 13px 24px; font-size: .875rem; }
@@ -140,7 +143,7 @@ details[open] > summary > span:last-child { transform: rotate(45deg); }
 .folio-masthead { min-height: 84px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); font-size: .875rem; }
 .folio-masthead > span { color: var(--muted); }
 .folio-masthead nav { display: flex; gap: 30px; }
-.folio-masthead a { padding-block: 12px; }
+.folio-masthead a { display: inline-flex; align-items: center; gap: 6px; padding-block: 12px; }
 .folio-masthead a span { display: inline-block; margin-left: 5px; color: var(--muted); }
 .folio-introduction { display: flex; align-items: flex-start; justify-content: space-between; gap: 48px; padding-block: 61px 57px; }
 .folio h1 { font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif; font-weight: 400; font-size: clamp(3.75rem, 6.8vw, 6.15rem); line-height: 1.05; letter-spacing: -.055em; }
@@ -185,6 +188,7 @@ details[open] > summary > span:last-child { transform: rotate(45deg); }
 .folio-earlier-entry h2 span { margin-left: 16px; color: var(--muted); font-size: .875rem; font-weight: 400; letter-spacing: 0; }
 .folio-earlier-entry p { max-width: 790px; color: var(--muted); margin: 8px 0 0; font-size: 1rem; line-height: 1.7; }
 .folio-footer { align-items: center; margin-top: 29px; padding-block: 26px 40px; border-top: 1px solid #55554f; font-size: .875rem; }
+.folio-footer > a { display: inline-flex; align-items: center; gap: 6px; }
 .folio-footer > span { color: var(--muted); font-size: .8125rem; }
 
 @media (max-width: 1000px) {

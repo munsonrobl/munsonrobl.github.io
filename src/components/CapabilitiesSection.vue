@@ -14,7 +14,7 @@ import { capabilityGroups, selectedTechnologies } from '../data/capabilities'
       <article v-for="group in capabilityGroups" :key="group.title" class="capability-card">
         <h3>{{ group.title }}</h3>
         <ul>
-          <li v-for="item in group.items" :key="item">{{ item }}</li>
+          <li v-for="item in group.items" :key="item.name">{{ item.name }}</li>
         </ul>
       </article>
     </div>

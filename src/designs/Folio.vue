@@ -2,6 +2,7 @@
 import { profile } from '../data/profile'
 import { experience } from '../data/experience'
 import { externalLinks } from '../data/links'
+import ContactIcon from '../components/ContactIcon.vue'
 
 const infotech = experience[0]!
 const earlierCareer = experience.slice(2)
@@ -12,8 +13,8 @@ const earlierCareer = experience.slice(2)
     <header class="folio-masthead">
       <span>Gainesville, Florida</span>
       <nav aria-label="Contact">
-        <a :href="externalLinks.linkedin" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-        <a :href="externalLinks.email">Email <span aria-hidden="true">↗</span></a>
+        <a :href="externalLinks.linkedin" target="_blank" rel="noreferrer">LinkedIn <ContactIcon type="website" /></a>
+        <a :href="externalLinks.email">Email <ContactIcon type="email" /></a>
         <a v-if="externalLinks.resumeUrl" :href="externalLinks.resumeUrl" download>Résumé <span aria-hidden="true">↓</span></a>
       </nav>
     </header>
@@ -81,7 +82,7 @@ const earlierCareer = experience.slice(2)
     </main>
 
     <footer class="folio-footer">
-      <a :href="externalLinks.email">robmunson@gmail.com <span aria-hidden="true">↗</span></a>
+      <a :href="externalLinks.email">robmunson@gmail.com <ContactIcon type="email" /></a>
       <span>Robert Munson · {{ new Date().getFullYear() }}</span>
     </footer>
   </div>

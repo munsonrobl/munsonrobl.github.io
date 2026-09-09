@@ -3,6 +3,7 @@ import { story } from '../data/story'
 import { experience } from '../data/experience'
 import ContactLinks from './ContactLinks.vue'
 import CareerRecord from './CareerRecord.vue'
+import AccordCapabilities from '../components/AccordCapabilities.vue'
 
 const headshot = new URL('../../assets/img/headshot-transparent.png', import.meta.url).href
 </script>
@@ -10,15 +11,16 @@ const headshot = new URL('../../assets/img/headshot-transparent.png', import.met
 <template>
   <div class="accord design-surface">
     <header class="accord-identity">
-      <span class="accord-location">Gainesville, Florida</span>
       <div class="accord-name">
         <h1>Robert<br />Munson</h1>
         <p>Engineering Leader</p>
       </div>
       <p class="accord-intro">{{ story.intro }}</p>
-      <ContactLinks />
-      <div class="accord-portrait">
-        <img :src="headshot" alt="Robert Munson" width="1303" height="1207" fetchpriority="high" />
+      <div class="accord-profile">
+        <div class="accord-portrait">
+          <img :src="headshot" alt="Robert Munson" width="1303" height="1207" fetchpriority="high" />
+        </div>
+        <ContactLinks />
       </div>
     </header>
 
@@ -78,6 +80,8 @@ const headshot = new URL('../../assets/img/headshot-transparent.png', import.met
           </div>
         </details>
       </div>
+
+      <AccordCapabilities />
 
       <footer><span>Robert Munson</span><ContactLinks /></footer>
     </main>
