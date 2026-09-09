@@ -92,7 +92,7 @@
 
 @media (min-width: 1700px) {
   .accord { grid-template-columns: minmax(420px, calc((100vw - 780px) / 2)) minmax(0, 1fr); }
-  .accord-identity { padding-left: max(65px, calc((100vw - 1320px) / 2)); }
+  .accord-identity { padding-left: clamp(65px, 4vw, 96px); }
   .accord-portrait { width: 330px; }
 }
 @media (max-width: 1000px) {
@@ -107,13 +107,13 @@
   .accord-identity { position: relative; top: auto; min-height: 0; padding: 25px 24px 27px; }
   .accord h1 { font-size: clamp(3.15rem, 9vw, 4.5rem); }
   .accord-name > p { font-size: 1.25rem; margin-top: 15px; }
-  .accord-intro { max-width: 100%; margin: 23px 0 14px; }
+  .accord-intro { width: 100%; max-width: none; margin: 23px 0 14px; }
   .accord-name { padding-right: 110px; }
-  .accord-profile { position: absolute; top: 38px; right: 16px; display: flex; width: 170px; flex-direction: column; align-items: center; }
-  .accord-profile .contact-links { order: 1; flex-direction: row; flex-wrap: nowrap; gap: 8px; margin-top: 6px; font-size: .75rem; white-space: nowrap; }
+  .accord-profile { display: contents; }
+  .accord-profile .contact-links { order: 1; flex-direction: row; flex-wrap: wrap; gap: 8px 18px; margin-top: 6px; font-size: .75rem; }
   .accord-profile .contact-links a { padding-block: 3px; }
-  .accord-portrait { order: 0; width: 115px; aspect-ratio: 1; padding: 0; margin: 0; overflow: hidden; border: 2px solid #a8c3e9; border-radius: 50%; background: #223754; }
-  .accord-portrait img { width: 88%; height: 88%; margin: 9% auto 0; object-fit: contain; object-position: center bottom; }
+  .accord-portrait { position: absolute; top: 38px; right: 16px; order: 0; width: 115px; aspect-ratio: 1; padding: 0; margin: 0; overflow: hidden; border: 2px solid #f2f5fa; border-radius: 50%; background: #2e496b; }
+  .accord-portrait img { width: 100%; height: 100%; margin: 0; object-fit: contain; object-position: center bottom; }
   .accord-content { padding: 30px 24px 22px; }
   .accord-lead { font-size: 1.375rem; margin-top: 24px; }
   .accord-index summary { gap: 12px; }
@@ -123,7 +123,7 @@
   .accord-capabilities { margin: 36px 0 31px; }
   .accord-capabilities-heading { margin-bottom: 22px; }
   .accord-capabilities-heading h2 { font-size: 1.5rem; }
-  .accord-capability-grid { gap: 10px; }
+  .accord-capability-grid { gap: 26px; }
   .accord-capability-items { grid-template-columns: 1fr; }
   .accord-technology-record { gap: 14px; }
   .accord-earlier summary { gap: 16px; }
@@ -133,9 +133,7 @@
   .design-picker button { flex: 0 0 auto; white-space: nowrap; }
 }
 @media (max-width: 380px) {
-  .accord-profile { top: 56px; right: 8px; width: 140px; }
-  .accord-portrait { width: 89px; }
-  .accord-intro { padding-right: 98px; }
+  .accord-portrait { top: 56px; right: 8px; width: 89px; }
   .accord-name { padding-right: 78px; }
   .accord h1 { font-size: 2.9rem; }
   .accord-name > p { font-size: 1.125rem; }
