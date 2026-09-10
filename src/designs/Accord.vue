@@ -36,7 +36,7 @@ const headshot = new URL('../../assets/img/headshot-transparent.png', import.met
 
         <div class="accord-index">
           <details v-for="(work, index) in story.work" :key="work.id" :open="index === 0">
-            <summary>
+            <summary data-umami-event="content-toggle" :data-umami-event-section="work.id">
               <span class="accord-number">0{{ index + 1 }}</span>
               <h3>{{ work.title }}</h3>
               <span class="accord-toggle" aria-hidden="true"></span>
@@ -59,7 +59,7 @@ const headshot = new URL('../../assets/img/headshot-transparent.png', import.met
         <p class="accord-business-lead">{{ story.business[0] }}</p>
         <p>{{ story.business[1] }}</p>
         <details>
-          <summary>Product, economics &amp; operations <span class="accord-toggle" aria-hidden="true"></span></summary>
+          <summary data-umami-event="content-toggle" data-umami-event-section="business-operations">Product, economics &amp; operations <span class="accord-toggle" aria-hidden="true"></span></summary>
           <div class="accord-business-detail">
             <p>{{ story.business[2] }}</p>
             <p>{{ story.business[3] }}</p>
@@ -69,7 +69,7 @@ const headshot = new URL('../../assets/img/headshot-transparent.png', import.met
 
       <div class="accord-earlier" aria-label="Earlier career">
         <details v-for="entry in experience.slice(2)" :key="entry.company">
-          <summary>
+          <summary data-umami-event="content-toggle" :data-umami-event-section="`earlier-career-${entry.company.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`">
             <span class="accord-dates">{{ entry.period }}</span>
             <h2>{{ entry.company }}</h2>
             <span class="accord-toggle" aria-hidden="true"></span>
