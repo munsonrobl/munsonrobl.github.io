@@ -7,4 +7,6 @@ import './styles.css'
 import './site.css'
 import App from './App.vue'
 
+console.log("Hello there. 👋");
+
 createApp(App).mount('#app')
