@@ -1,0 +1,147 @@
+/* Single production layout. */
+.site {
+  --muted: #616b7a;
+  --line: #d8dee6;
+  --accent: #365f9b;
+  display: grid;
+  grid-template-columns: minmax(310px, 34%) minmax(0, 1fr);
+  min-height: 100svh;
+  color: #263449;
+  background: #fafbfc;
+  font-family: "Avenir Next", Avenir, Inter, sans-serif;
+}
+.identity {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  padding: 35px clamp(28px, 3.6vw, 65px) 0;
+  color: #f2f5fa;
+  background: #1c2c43;
+  overflow: hidden;
+}
+.name { margin-top: 0; }
+.site h1 { font-size: clamp(3.375rem, 5.6vw, 5.5rem); line-height: 1.01; letter-spacing: -.065em; font-weight: 500; }
+.name > p { margin: 20px 0 0; font-size: clamp(1.25rem, 1.9vw, 1.625rem); letter-spacing: -.03em; line-height: 1.4; color: #b9ceec; }
+.intro { max-width: 330px; margin: 25px 0 19px; color: #cfdae9; font-size: 1.0625rem; line-height: 1.7; }
+.profile { display: contents; }
+.identity .contact-links { font-size: .875rem; gap: 26px; }
+.profile .contact-links { order: 1; }
+.identity .contact-links a span { color: #a8c3e9; }
+.portrait { order: 2; margin: auto -10px 0; padding-top: 30px; }
+.portrait img { display: block; width: min(85%, 272px); height: auto; margin-inline: auto; }
+.content { width: 100%; max-width: 1020px; padding: 46px clamp(30px, 5.1vw, 86px) 22px; }
+.company-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 15px; }
+.company-heading h2 { font-size: 1.75rem; font-weight: 500; line-height: 1.25; letter-spacing: -.045em; }
+.company-heading > span, .work-number, .dates { font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; font-size: .75rem; line-height: 1.7; color: var(--muted); white-space: nowrap; }
+.role { color: var(--muted); font-size: .875rem; line-height: 1.7; margin: 8px 0 0; }
+.lead { margin: 30px 0 19px; font-size: clamp(1.375rem, 2.1vw, 1.875rem); line-height: 1.5; letter-spacing: -.025em; }
+.growth { color: #515f71; margin-bottom: 29px; }
+.work-index > details { border-top: 1px solid var(--line); }
+.work-index > details:last-child { border-bottom: 1px solid var(--line); }
+.work-index summary { align-items: center; gap: 17px; padding-block: 19px; }
+.work-index h3 { font-size: 1.125rem; font-weight: 500; line-height: 1.5; letter-spacing: -.02em; }
+.work-number { width: 24px; flex: 0 0 24px; color: var(--accent); }
+.site summary { transition: color 140ms ease; }
+.site summary:hover { color: var(--accent); }
+.disclosure-icon { display: block; position: relative; width: 12px; height: 12px; flex: 0 0 12px; align-self: center; margin-left: auto; color: var(--accent); }
+.disclosure-icon::before, .disclosure-icon::after { content: ''; position: absolute; background: currentColor; }
+.disclosure-icon::before { top: 5px; left: 0; height: 1px; width: 11px; }
+.disclosure-icon::after { top: 0; left: 5px; height: 11px; width: 1px; }
+.site details[open] > summary > .disclosure-icon { transform: none; }
+.site details[open] > summary > .disclosure-icon::after { display: none; }
+.evidence { margin: 0 0 24px 41px; border-left: 2px solid #bfd0e7; padding-left: 18px; }
+.evidence p { margin: 0; font-size: 1rem; line-height: 1.8; }
+.evidence .note { color: var(--muted); font-size: .9375rem; margin-top: 16px; }
+.site .career-record { margin: 5px 0 0; }
+.site .career-record details { border-top: 0; border-bottom: 1px solid var(--line); }
+.site .career-record summary { font-size: .875rem; padding-block: 14px; color: var(--muted); }
+.site .career-record summary:hover { color: var(--accent); }
+.site .career-record .expanded-copy { padding-top: 5px; }
+.business { margin: 40px -25px 31px; padding: 27px 25px 12px; background: #edf2f8; border-top: 2px solid #6287b9; border-radius: 10px; }
+.business .company-heading h2 { font-size: 1.5rem; }
+.business-lead { margin: 22px 0 16px; font-size: 1.1875rem; line-height: 1.65; letter-spacing: -.015em; }
+.business > p:not(.role):not(.business-lead) { color: #515f71; margin-bottom: 14px; }
+.business details { border-top: 1px solid #cdd7e4; }
+.business summary { font-size: .875rem; line-height: 1.7; padding-block: 16px; }
+.business-detail { padding-top: 4px; }
+.capabilities { margin: 54px 0 38px; }
+.capabilities-heading { margin-bottom: 27px; }
+.capabilities-heading h2 { font-size: 1.75rem; font-weight: 500; line-height: 1.25; letter-spacing: -.045em; }
+.capabilities-heading > p { max-width: 520px; margin: 8px 0 0; color: var(--muted); font-size: .9375rem; line-height: 1.65; }
+.capability-grid { display: grid; grid-template-columns: 1fr; gap: 31px; }
+.capability-group { padding: 0; }
+.capability-group > h3 { margin-bottom: 12px; color: var(--accent); font-size: .75rem; font-weight: 600; line-height: 1.5; letter-spacing: .07em; text-transform: uppercase; }
+.capability-items { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 28px; border-top: 1px solid #e5e9ef; padding-top: 16px; }
+.capability-item { padding: 0; }
+.capability-item h4 { margin: 0 0 7px; color: #34445a; font-size: .9375rem; font-weight: 500; line-height: 1.45; }
+.capability-item p { margin: 0; color: var(--muted); font-size: .875rem; line-height: 1.65; }
+.technology-record { display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 16px; padding: 17px 18px; border-left: 2px solid #bfd0e7; background: #f2f5f9; }
+.technology-record h3 { margin-bottom: 5px; color: var(--muted); font-size: .6875rem; font-weight: 600; line-height: 1.5; letter-spacing: .07em; text-transform: uppercase; }
+.technology-record p { margin: 0; color: #435269; font-size: .8125rem; line-height: 1.65; }
+.earlier-career > details { border-bottom: 1px solid var(--line); }
+.earlier-career summary { align-items: center; gap: 23px; padding-block: 18px; }
+.earlier-career h2 { font-size: 1rem; font-weight: 500; letter-spacing: -.02em; }
+.earlier-detail { padding-top: 2px; }
+.earlier-detail .role { margin-bottom: 12px; }
+.content footer { align-items: center; gap: 15px; margin-top: 64px; color: var(--muted); }
+.content footer > span { font-size: .8125rem; }
+.content footer .contact-links { font-size: .8125rem; }
+
+@media (min-width: 1700px) {
+  .site { grid-template-columns: minmax(420px, calc((100vw - 780px) / 2)) minmax(0, 1fr); }
+  .identity { padding-left: clamp(65px, 4vw, 96px); }
+  .portrait { width: 330px; }
+}
+@media (max-width: 1000px) {
+  .site { grid-template-columns: 310px minmax(0, 1fr); }
+  .content { padding-inline: 28px; }
+  .identity { padding-inline: 28px; }
+  .company-heading { flex-wrap: wrap; gap: 6px 12px; }
+  .business { margin-inline: -14px; padding-inline: 14px; }
+}
+@media (max-width: 740px) {
+  .site { display: block; }
+  .identity { position: relative; top: auto; min-height: 0; padding: 25px 24px 27px; }
+  .site h1 { font-size: clamp(3.15rem, 9vw, 4.5rem); }
+  .name > p { font-size: 1.25rem; margin-top: 15px; }
+  .intro { width: 100%; max-width: none; margin: 23px 0 14px; }
+  .name { padding-right: 110px; }
+  .profile { display: contents; }
+  .profile .contact-links { order: 1; flex-direction: row; flex-wrap: wrap; gap: 8px 18px; margin-top: 6px; font-size: .75rem; }
+  .profile .contact-links a { padding-block: 3px; }
+  .portrait { position: absolute; top: 38px; right: 16px; order: 0; width: 115px; aspect-ratio: 1; padding: 0; margin: 0; overflow: hidden; border: 2px solid #cfdae9; border-radius: 50%; background: #4b5869; }
+  .portrait img { width: 100%; height: 100%; margin: 0; object-fit: contain; object-position: center bottom; }
+  .content { padding: 30px 24px 22px; }
+  .lead { font-size: 1.375rem; margin-top: 24px; }
+  .work-index summary { gap: 12px; }
+  .work-index h3 { font-size: 1.0625rem; }
+  .evidence { margin-left: 0; padding-left: 15px; }
+  .business { margin: 31px 0 19px; padding: 25px 22px 10px; }
+  .capabilities { margin: 36px 0 31px; }
+  .capabilities-heading { margin-bottom: 22px; }
+  .capabilities-heading h2 { font-size: 1.5rem; }
+  .capability-grid { gap: 26px; }
+  .capability-items { grid-template-columns: 1fr; }
+  .technology-record { gap: 14px; }
+  .earlier-career summary { gap: 16px; }
+  .dates { font-size: .75rem; }
+  .content footer { flex-wrap: wrap; }
+}
+@media (max-width: 380px) {
+  .portrait { top: 56px; right: 8px; width: 89px; }
+  .name { padding-right: 78px; }
+  .site h1 { font-size: 2.9rem; }
+  .name > p { font-size: 1.125rem; }
+  .earlier-career summary { flex-wrap: wrap; gap: 8px 15px; }
+}
+@media (prefers-reduced-motion: reduce) { .site summary { transition: none; } }
+@media print {
+  .site { display: block; background: white; }
+  .identity { position: static; min-height: 0; background: white; color: #222; padding: 0; }
+  .identity p { color: #555; }
+  .portrait { display: none; }
+  .content { max-width: none; padding: 20px 0; }
+}

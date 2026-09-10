@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { externalLinks } from '../data/links'
-import ContactIcon from '../components/ContactIcon.vue'
+import ContactIcon from './ContactIcon.vue'
 </script>
 <template>
   <nav class="contact-links" aria-label="Contact">

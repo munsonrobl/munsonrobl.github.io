@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Accord from './designs/Accord.vue'
+import CareerSite from './components/CareerSite.vue'
 </script>
 <template>
   <a class="skip-link" href="#main-content">Skip to career</a>
-  <Accord />
+  <CareerSite />
 </template>

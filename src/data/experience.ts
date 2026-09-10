@@ -1,4 +1,15 @@
-import type { ExperienceEntry } from '../types/resume'
+interface ExperienceRole {
+  title: string
+  period: string
+}
+
+interface ExperienceEntry {
+  company: string
+  period: string
+  roles: ExperienceRole[]
+  summary: string
+  details?: string[]
+}
 
 export const experience: ExperienceEntry[] = [
   {
