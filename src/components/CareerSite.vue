@@ -151,16 +151,16 @@ onBeforeUnmount(() => {
         </details>
       </div>
 
-      <article class="business" aria-labelledby="business-title" data-section-title="An owner’s perspective." data-section-label="Ownership" data-reveal>
+      <article class="business" aria-labelledby="business-title" data-section-title="A broader operating lens." data-section-label="Business perspective" data-reveal>
         <header class="company-heading">
-          <h2 id="business-title">An owner’s perspective.</h2>
-          <span>Since 2022</span>
+          <h2 id="business-title">A broader operating lens.</h2>
+          <span>Business &amp; operations</span>
         </header>
-        <p class="role">Co-founder &amp; co-owner · Digital education</p>
+        <p class="role">Experience across product, growth &amp; operations</p>
         <p class="business-lead">{{ story.business[0] }}</p>
         <p>{{ story.business[1] }}</p>
         <details>
-          <summary data-umami-event="content-toggle" data-umami-event-section="business-operations">Product, economics &amp; operations <span class="disclosure-icon" aria-hidden="true"></span></summary>
+          <summary data-umami-event="content-toggle" data-umami-event-section="business-operations">Growth, economics &amp; operations <span class="disclosure-icon" aria-hidden="true"></span></summary>
           <div class="business-detail">
             <p>{{ story.business[2] }}</p>
             <p>{{ story.business[3] }}</p>

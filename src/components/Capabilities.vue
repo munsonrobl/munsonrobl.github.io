@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { capabilityGroups, currentPractice, selectedTechnologies } from '../data/capabilities'
+import { capabilityGroups, currentPractice, technicalFoundation } from '../data/capabilities'
 </script>
 
 <template>
   <section class="capabilities" aria-labelledby="capabilities-heading">
     <header class="capabilities-heading">
       <h2 id="capabilities-heading">Demonstrated range.</h2>
-      <p>Leadership grounded in technical practice and direct business ownership.</p>
+      <p>Leadership grounded in technical practice and a broader operating perspective.</p>
     </header>
 
     <div class="capability-grid">
@@ -23,8 +23,8 @@ import { capabilityGroups, currentPractice, selectedTechnologies } from '../data
 
     <div class="technology-record">
       <div>
-        <h3>Selected technologies</h3>
-        <p>{{ selectedTechnologies.join(' · ') }}</p>
+        <h3>Technical foundation</h3>
+        <p>{{ technicalFoundation.join(' · ') }}</p>
       </div>
       <div>
         <h3>Current practice</h3>

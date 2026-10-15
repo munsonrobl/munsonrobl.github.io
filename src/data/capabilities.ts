@@ -4,19 +4,19 @@ export const capabilityGroups = [
     items: [
       {
         name: 'Organizational leadership',
-        proof: 'Lead 30+ engineers across multiple product teams through managers and engineering leads.',
+        proof: 'Lead a 30+ person engineering and design organization spanning product, platform, SRE, frontend, and contractor teams.',
       },
       {
         name: 'Leader development',
-        proof: 'Coach emerging leaders and step in directly when teams need clarity, accountability, or delivery momentum.',
+        proof: 'Coach managers, develop successors, and help teams regain clarity through leadership transitions.',
       },
       {
         name: 'Platform strategy',
-        proof: 'Guide long-lived and acquired products toward shared identity, services, and application foundations.',
+        proof: 'Guide technology strategy across 8+ products and 12+ shared services and third-party integrations.',
       },
       {
         name: 'Change leadership',
-        proof: 'Help teams stay effective through ownership, organizational, and product transitions.',
+        proof: 'Turn ownership, acquisition, organizational, and product change into clear direction while protecting team focus.',
       },
     ],
   },
@@ -32,8 +32,8 @@ export const capabilityGroups = [
         proof: 'Helped turn an internal data capability into the foundation of the company\u2019s first Data-as-a-Service product.',
       },
       {
-        name: 'Business ownership',
-        proof: 'Co-own a profitable digital education business spanning acquisition, conversion, renewals, and support.',
+        name: 'Operating perspective',
+        proof: 'Hands-on experience with customer acquisition, pricing, conversion, renewals, support, and unit economics.',
       },
       {
         name: 'Build vs. buy',
@@ -50,7 +50,7 @@ export const capabilityGroups = [
       },
       {
         name: 'Data platforms',
-        proof: 'Worked across PostgreSQL, Redshift, Power BI, AWS, data pipelines, and external data delivery.',
+        proof: 'Helped build the warehouse that became a Data-as-a-Service foundation and a data layer for customer-facing AI.',
       },
       {
         name: 'Cloud & delivery systems',
@@ -58,25 +58,25 @@ export const capabilityGroups = [
       },
       {
         name: 'AI-assisted engineering',
-        proof: 'Bring AI into real delivery work through implementation, pull requests, and human review.',
+        proof: 'Built practical AI capability across Engineering and expanded useful workflows into Product, Design, and Customer Success.',
       },
     ],
   },
 ] as const
 
-export const selectedTechnologies = [
+export const technicalFoundation = [
   'AWS',
+  'APIs & integrations',
+  'PostgreSQL/Redshift',
+  'JavaScript/Vue',
   'Python',
   'Ruby/Rails',
-  'JavaScript/Vue',
   'C#/.NET',
-  'SQL/PostgreSQL',
-  'Docker',
 ] as const
 
 export const currentPractice = [
-  'GitHub Copilot',
-  'Cursor',
-  'Claude',
-  'Codex',
+  'AI-assisted delivery',
+  'Spec-driven development',
+  'Agentic workflows',
+  'Evaluation & human oversight',
 ] as const
