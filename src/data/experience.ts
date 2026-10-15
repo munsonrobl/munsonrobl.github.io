@@ -41,6 +41,6 @@ export const experience: ExperienceEntry[] = [
     company: 'Quickmax',
     period: '2002 — 2004',
     roles: [{ title: 'Web Programmer / Designer', period: '2002 — 2004' }],
-    summary: 'My engineering instincts were seeded in the early days of web development and design, when building for the web meant moving fluidly between user needs, visual craft, content systems, ecommerce, and code.',
+    summary: 'My engineering instincts were seeded in the early days of web development and design, when standards were still evolving and consistency meant learning the quirks of every browser. Building for the web meant moving fluidly between user needs, visual craft, content systems, ecommerce, and code.',
   },
 ]
