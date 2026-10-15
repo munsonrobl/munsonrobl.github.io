@@ -7,6 +7,8 @@ import CareerRecord from './CareerRecord.vue'
 import Capabilities from './Capabilities.vue'
 
 const headshot = new URL('../../assets/img/headshot-transparent.png', import.meta.url).href
+const headshot320 = new URL('../../assets/img/headshot-320.webp', import.meta.url).href
+const headshot640 = new URL('../../assets/img/headshot-640.webp', import.meta.url).href
 const siteElement = ref<HTMLElement | null>(null)
 const activeSection = ref({ title: 'Infotech', label: 'Current role' })
 const sectionIndicatorVisible = ref(false)
@@ -87,7 +89,14 @@ onBeforeUnmount(() => {
       <p class="intro">{{ story.intro }}</p>
       <div class="profile">
         <div class="portrait">
-          <img :src="headshot" alt="Robert Munson" width="1303" height="1207" fetchpriority="high" />
+          <picture>
+            <source
+              type="image/webp"
+              :srcset="`${headshot320} 320w, ${headshot640} 640w`"
+              sizes="(max-width: 740px) 115px, 272px"
+            />
+            <img :src="headshot" alt="Robert Munson" width="640" height="593" fetchpriority="high" decoding="async" />
+          </picture>
         </div>
         <ContactLinks />
       </div>
