@@ -11,6 +11,7 @@ const headshot = new URL('../../assets/img/headshot-transparent.png', import.met
 const headshot320 = new URL('../../assets/img/headshot-320.webp', import.meta.url).href
 const headshot640 = new URL('../../assets/img/headshot-640.webp', import.meta.url).href
 const siteElement = ref<HTMLElement | null>(null)
+const contentElement = ref<HTMLElement | null>(null)
 const activeSection = ref({ title: 'Infotech', label: 'Current role' })
 const sectionIndicatorVisible = ref(false)
 
@@ -43,7 +44,8 @@ const updateScrollState = () => {
         label: currentSection.dataset.sectionLabel,
       }
     }
-    sectionIndicatorVisible.value = window.scrollY > 48
+    const stickyStart = contentElement.value?.offsetTop ?? 0
+    sectionIndicatorVisible.value = window.scrollY > Math.max(48, stickyStart)
   })
 }
 
@@ -110,7 +112,7 @@ onBeforeUnmount(() => {
       </div>
     </header>
 
-    <main id="main-content" class="content" tabindex="-1">
+    <main id="main-content" ref="contentElement" class="content" tabindex="-1">
       <div class="section-indicator" :class="{ 'is-visible': sectionIndicatorVisible }" aria-hidden="true">
         <Transition name="section-label" mode="out-in">
           <div :key="`${activeSection.title}-${activeSection.label}`" class="section-indicator-content">
