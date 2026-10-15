@@ -4,15 +4,18 @@ import { story } from '../data/story'
 </script>
 <template>
   <div class="career-record">
-    <details>
-      <summary data-umami-event="content-toggle" data-umami-event-section="infotech-role-history">Seven roles at Infotech <span aria-hidden="true">+</span></summary>
+    <aside class="technical-practice" aria-labelledby="technical-practice-title">
+      <h3 id="technical-practice-title">Technical practice</h3>
+      <p>{{ story.technical }}</p>
+    </aside>
+    <details class="role-progression">
+      <summary data-umami-event="content-toggle" data-umami-event-section="infotech-role-history">
+        View role progression
+        <span class="role-progression-action">Seven roles&nbsp; <span class="role-progression-arrow" aria-hidden="true">→</span></span>
+      </summary>
       <ol class="role-list">
         <li v-for="role in experience[0]!.roles" :key="role.title"><span>{{ role.period }}</span><strong>{{ role.title }}</strong></li>
       </ol>
-    </details>
-    <details>
-      <summary data-umami-event="content-toggle" data-umami-event-section="technical-practice">Technical practice <span aria-hidden="true">+</span></summary>
-      <div class="expanded-copy"><p>{{ story.technical }}</p></div>
     </details>
   </div>
 </template>

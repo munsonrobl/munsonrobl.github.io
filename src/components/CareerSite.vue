@@ -146,17 +146,16 @@ onBeforeUnmount(() => {
       </article>
 
       <div class="earlier-career" aria-label="Earlier career" data-section-title="Earlier career" data-section-label="Career history" data-reveal>
-        <details v-for="entry in experience.slice(2)" :key="entry.company">
-          <summary data-umami-event="content-toggle" :data-umami-event-section="`earlier-career-${entry.company.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`">
-            <span class="dates">{{ entry.period }}</span>
+        <article v-for="entry in experience.slice(2)" :key="entry.company" class="earlier-entry">
+          <header class="earlier-heading">
             <h2>{{ entry.company }}</h2>
-            <span class="disclosure-icon" aria-hidden="true"></span>
-          </summary>
+            <span class="dates">{{ entry.period }}</span>
+          </header>
           <div class="earlier-detail">
             <p class="role">{{ entry.roles[0]!.title }}</p>
             <p>{{ entry.summary }}</p>
           </div>
-        </details>
+        </article>
       </div>
 
       <article class="business" aria-labelledby="business-title" data-section-title="A broader operating lens." data-section-label="Business perspective" data-reveal>
