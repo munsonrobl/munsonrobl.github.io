@@ -47,22 +47,19 @@ details[open] > summary > span:last-child { transform: rotate(45deg); }
 .career-record details { border-top: 1px solid var(--line); }
 .career-record details:last-child { border-bottom: 1px solid var(--line); }
 .career-record summary { padding-block: 16px; font-size: .875rem; }
-.role-list { margin: 0; padding: 0 0 20px; list-style: none; }
-.role-list li { display: grid; grid-template-columns: 130px 1fr; gap: 16px; padding-block: 8px; font-size: .875rem; line-height: 1.6; }
-.role-list li > span { color: var(--muted); font-size: .8125rem; }
+.role-list { display: grid; grid-template-columns: max-content minmax(0, 1fr); column-gap: clamp(16px, 3vw, 36px); margin: 0; padding: 0 0 20px; list-style: none; }
+.role-list li { display: grid; grid-column: 1 / -1; grid-template-columns: subgrid; column-gap: inherit; padding-block: 8px; font-size: .875rem; line-height: 1.6; }
+.role-list li > span { color: var(--muted); font-size: .8125rem; white-space: nowrap; }
 .role-list strong { font-weight: 500; }
 .site footer { display: flex; justify-content: space-between; gap: 24px; font-size: .8125rem; }
-
-@media (max-width: 1000px) {
-  .role-list li { grid-template-columns: 112px 1fr; gap: 12px; }
-}
 
 @media (max-width: 740px) {
   .contact-links { gap: 18px; }
 }
 
 @media (max-width: 380px) {
-  .role-list li { grid-template-columns: 1fr; gap: 2px; }
+  .role-list { grid-template-columns: 1fr; }
+  .role-list li { row-gap: 2px; }
 }
 
 @media print {

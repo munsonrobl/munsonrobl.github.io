@@ -8,7 +8,6 @@ interface ExperienceEntry {
   period: string
   roles: ExperienceRole[]
   summary: string
-  details?: string[]
 }
 
 export const experience: ExperienceEntry[] = [
@@ -25,11 +24,6 @@ export const experience: ExperienceEntry[] = [
       { title: 'Software Engineer', period: 'Nov 2010 — 2012' },
     ],
     summary: 'Lead multiple teams through engineering leads and managers, guide platform strategy and product modernization, and develop engineering leadership. Helped build the data capability that became a self-service platform and the foundation of the company’s first Data-as-a-Service product.',
-    details: [
-      'Led developers and designers through a six-month Doc Express rewrite whose architecture still supports a product handling more than 15 times its original monthly document volume.',
-      'Shaped Signet architecture and engineering practices, including data models, APIs, containerized development, and automated production delivery.',
-      'Built shared OAuth2 SSO, account management, billing APIs, and support tooling that became foundational capabilities across the product portfolio.',
-    ],
   },
   {
     company: 'Private SaaS venture',
@@ -41,12 +35,12 @@ export const experience: ExperienceEntry[] = [
     company: 'Jones Edmunds',
     period: '2004 — 2010',
     roles: [{ title: 'Application Developer / Database Administrator', period: '2004 — 2010' }],
-    summary: 'Worked directly with department leaders to build software, databases, and reporting systems that automated environmental-compliance workflows and improved physical-records management.',
+    summary: 'I learned how internal applications can create a real competitive advantage—turning complex, paper-heavy environmental workflows into faster, more reliable systems built around how the business actually worked.',
   },
   {
     company: 'Quickmax',
     period: '2002 — 2004',
     roles: [{ title: 'Web Programmer / Designer', period: '2002 — 2004' }],
-    summary: 'Gathered requirements and built CMS-driven websites, e-commerce systems, and custom applications while helping modernize legacy ASP software in C# and ASP.NET.',
+    summary: 'My engineering instincts were seeded in the early days of web development and design, when building for the web meant moving fluidly between user needs, visual craft, content systems, ecommerce, and code.',
   },
 ]

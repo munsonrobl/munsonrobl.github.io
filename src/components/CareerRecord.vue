@@ -11,8 +11,8 @@ import { story } from '../data/story'
       </ol>
     </details>
     <details>
-      <summary data-umami-event="content-toggle" data-umami-event-section="architecture-delivery">Architecture &amp; delivery <span aria-hidden="true">+</span></summary>
-      <div class="expanded-copy"><p v-for="detail in experience[0]!.details" :key="detail">{{ detail }}</p><p>{{ story.technical }}</p></div>
+      <summary data-umami-event="content-toggle" data-umami-event-section="technical-practice">Technical practice <span aria-hidden="true">+</span></summary>
+      <div class="expanded-copy"><p>{{ story.technical }}</p></div>
     </details>
   </div>
 </template>

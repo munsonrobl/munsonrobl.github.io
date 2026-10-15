@@ -33,9 +33,15 @@
 .intro { max-width: 330px; margin: 25px 0 19px; color: #cfdae9; font-size: 1.0625rem; line-height: 1.7; }
 .profile { display: contents; }
 .identity .contact-links { font-size: .875rem; gap: 26px; }
-.profile .contact-links { order: 1; }
+.profile .contact-links { order: 2; }
 .identity .contact-links a span { color: #a8c3e9; }
-.portrait { order: 2; margin: auto -10px 0; padding-top: 30px; }
+.resume-prompt { order: 1; max-width: 330px; margin: 1px 0 9px; padding: 15px 0 13px; border-top: 1px solid rgba(185, 206, 236, .28); border-bottom: 1px solid rgba(185, 206, 236, .18); }
+.resume-prompt > span { display: block; margin-bottom: 4px; color: #a8c3e9; font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: .625rem; font-weight: 600; letter-spacing: .13em; line-height: 1.5; text-transform: uppercase; }
+.resume-prompt p { margin: 0 0 5px; color: #cfdae9; font-size: .8125rem; line-height: 1.55; }
+.resume-prompt a { display: inline-flex; gap: 8px; align-items: center; color: #f2f5fa; font-size: .875rem; font-weight: 500; }
+.resume-prompt a span { color: #a8c3e9; transition: transform 160ms ease; }
+.resume-prompt a:hover span { transform: translateY(2px); }
+.portrait { order: 3; margin: auto -10px 0; padding-top: 30px; }
 .portrait picture { display: block; }
 .portrait img { display: block; width: min(85%, 272px); height: auto; margin-inline: auto; }
 .content { width: 100%; max-width: 1020px; padding: 0 clamp(30px, 5.1vw, 86px) 22px; }
@@ -92,7 +98,7 @@
 .capabilities { margin: 54px 0 38px; }
 .capabilities-heading { margin-bottom: 27px; }
 .capabilities-heading h2 { font-size: 1.75rem; font-weight: 500; line-height: 1.25; letter-spacing: -.045em; }
-.capabilities-heading > p { max-width: 520px; margin: 8px 0 0; color: var(--muted); font-size: .9375rem; line-height: 1.65; }
+.capabilities-heading > p { max-width: 680px; margin: 8px 0 0; color: var(--muted); font-size: .9375rem; line-height: 1.65; }
 .capability-grid { display: grid; grid-template-columns: 1fr; gap: 31px; }
 .capability-group { padding: 0; }
 .capability-group > h3 { margin-bottom: 12px; color: var(--accent); font-size: .75rem; font-weight: 600; line-height: 1.5; letter-spacing: .07em; text-transform: uppercase; }
@@ -135,6 +141,9 @@
   .profile { display: contents; }
   .profile .contact-links { order: 1; flex-direction: row; flex-wrap: wrap; gap: 8px 18px; margin-top: 6px; font-size: .75rem; }
   .profile .contact-links a { padding-block: 3px; }
+  .resume-prompt { order: 2; max-width: none; margin: 8px 0 0; padding: 11px 0 0; border-bottom: 0; }
+  .resume-prompt p { display: inline; margin-right: 7px; font-size: .75rem; }
+  .resume-prompt a { font-size: .75rem; }
   .portrait { position: absolute; top: 38px; right: 16px; order: 0; width: 115px; aspect-ratio: 1; padding: 0; margin: 0; overflow: hidden; border: 2px solid #cfdae9; border-radius: 50%; background: #4b5869; }
   .portrait img { width: 100%; height: 100%; margin: 0; object-fit: contain; object-position: center bottom; }
   .scroll-progress { position: fixed; right: 0; bottom: auto; left: 0; width: auto; height: 2px; }
@@ -167,7 +176,7 @@
   .earlier-career summary { flex-wrap: wrap; gap: 8px 15px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .site summary, .disclosure-icon::after, .scroll-progress::after, .section-indicator, .section-indicator::after, .section-indicator-content, .section-label-enter-active, .section-label-leave-active { transition: none; }
+  .site summary, .resume-prompt a span, .disclosure-icon::after, .scroll-progress::after, .section-indicator, .section-indicator::after, .section-indicator-content, .section-label-enter-active, .section-label-leave-active { transition: none; }
   .site details[open] > :is(.evidence, .business-detail, .earlier-detail, .expanded-copy, .role-list) { animation: none; }
 }
 @media print {

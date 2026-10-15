@@ -2,6 +2,7 @@
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { story } from '../data/story'
 import { experience } from '../data/experience'
+import { externalLinks } from '../data/links'
 import ContactLinks from './ContactLinks.vue'
 import CareerRecord from './CareerRecord.vue'
 import Capabilities from './Capabilities.vue'
@@ -98,7 +99,14 @@ onBeforeUnmount(() => {
             <img :src="headshot" alt="Robert Munson" width="640" height="593" fetchpriority="high" decoding="async" />
           </picture>
         </div>
-        <ContactLinks />
+        <div class="resume-prompt">
+          <span>Full career record</span>
+          <p>Roles, dates, and additional detail.</p>
+          <a :href="externalLinks.resumeUrl" download data-umami-event="resume-download" data-umami-event-placement="sidebar">
+            Download résumé <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+        <ContactLinks hide-resume />
       </div>
     </header>
 
