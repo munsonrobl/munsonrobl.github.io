@@ -157,7 +157,9 @@
   .scroll-progress { position: fixed; z-index: 12; right: 0; bottom: auto; left: 0; width: auto; height: 2px; }
   .scroll-progress::after { transform: scaleX(var(--scroll-progress, 0)); transform-origin: left; }
   .content { padding: 0 24px 22px; }
-  .section-indicator { min-height: 30px; }
+  .section-indicator { min-height: 30px; margin-inline: -24px; padding-inline: 24px; }
+  .section-indicator.is-visible { background: #fafbfc; backdrop-filter: none; }
+  .section-indicator.is-visible::before { content: ''; position: absolute; right: 0; bottom: 100%; left: 0; height: max(72px, env(safe-area-inset-top)); background: #fafbfc; }
   .section-indicator strong { max-width: 62%; font-size: .8125rem; }
   .section-indicator span { font-size: .5625rem; }
   .lead { font-size: 1.375rem; margin-top: 24px; }
