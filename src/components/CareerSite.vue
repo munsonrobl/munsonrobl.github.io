@@ -24,8 +24,12 @@ const updateScrollState = () => {
     const page = document.documentElement
     const scrollRange = page.scrollHeight - window.innerHeight
     const progress = scrollRange > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollRange)) : 0
+    const sidebarTransition = Math.min(1, Math.max(0, (window.scrollY - 160) / 440))
+    const sidebarShift = Math.min(190, Math.max(120, window.innerHeight * .18)) * sidebarTransition
 
     siteElement.value?.style.setProperty('--scroll-progress', progress.toString())
+    siteElement.value?.style.setProperty('--portrait-opacity', (1 - sidebarTransition).toString())
+    siteElement.value?.style.setProperty('--sidebar-shift', `${sidebarShift}px`)
 
     const sections = Array.from(
       siteElement.value?.querySelectorAll<HTMLElement>('[data-section-label]') ?? [],
@@ -101,14 +105,16 @@ onBeforeUnmount(() => {
             <img :src="headshot" alt="Robert Munson" width="640" height="593" fetchpriority="high" decoding="async" />
           </picture>
         </div>
-        <div class="resume-prompt">
-          <span>Full career record</span>
-          <p>Roles, dates, and additional detail.</p>
-          <a :href="externalLinks.resumeUrl" download data-umami-event="resume-download" data-umami-event-placement="sidebar">
-            Download résumé <span aria-hidden="true">↓</span>
-          </a>
+        <div class="sidebar-actions">
+          <div class="resume-prompt">
+            <span>Full career record</span>
+            <p>Roles, dates, and additional detail.</p>
+            <a :href="externalLinks.resumeUrl" download data-umami-event="resume-download" data-umami-event-placement="sidebar">
+              Download résumé <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+          <ContactLinks hide-resume />
         </div>
-        <ContactLinks hide-resume />
       </div>
     </header>
 

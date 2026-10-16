@@ -32,6 +32,7 @@
 .name > p { margin: 20px 0 0; font-size: clamp(1.25rem, 1.9vw, 1.625rem); letter-spacing: -.03em; line-height: 1.4; color: #b9ceec; }
 .intro { max-width: 330px; margin: 25px 0 19px; color: #cfdae9; font-size: 1.0625rem; line-height: 1.7; }
 .profile { display: contents; }
+.sidebar-actions { order: 1; }
 .identity .contact-links { font-size: .875rem; gap: 26px; }
 .profile .contact-links { order: 2; }
 .identity .contact-links a span { color: #a8c3e9; }
@@ -126,6 +127,10 @@
 .content footer > span { font-size: .8125rem; }
 .content footer .contact-links { font-size: .8125rem; }
 
+@media (min-width: 741px) {
+  .sidebar-actions { transform: translateY(var(--sidebar-shift, 0px)); will-change: transform; }
+  .portrait { opacity: var(--portrait-opacity, 1); will-change: opacity; }
+}
 @media (min-width: 1700px) {
   .site { grid-template-columns: minmax(420px, calc((100vw - 780px) / 2)) minmax(0, 1fr); }
   .identity { padding-left: clamp(65px, 4vw, 96px); }
@@ -146,14 +151,15 @@
   .intro { width: 100%; max-width: none; margin: 23px 0 14px; }
   .name { padding-right: 110px; }
   .profile { display: contents; }
+  .sidebar-actions { display: contents; }
   .profile .contact-links { order: 1; flex-direction: row; flex-wrap: wrap; gap: 8px 18px; margin-top: 6px; font-size: .75rem; }
   .profile .contact-links a { padding-block: 3px; }
   .resume-prompt { order: 2; max-width: none; margin: 8px 0 0; padding: 11px 0 0; border-bottom: 0; }
   .resume-prompt p { display: inline; margin-right: 7px; font-size: .75rem; }
   .resume-prompt a { font-size: .75rem; }
-  .portrait { position: absolute; top: 38px; right: 16px; order: 0; width: 115px; aspect-ratio: 1; padding: 0; margin: 0; overflow: hidden; border: 2px solid #cfdae9; border-radius: 50%; background: #4b5869; }
+  .portrait { position: absolute; top: 38px; right: 16px; order: 0; width: 115px; aspect-ratio: 1; padding: 0; margin: 0; overflow: hidden; border: 1px solid rgba(207, 218, 233, .5); border-radius: 50%; background: rgba(118, 144, 178, .18); }
   .portrait picture { display: flex; align-items: flex-end; justify-content: center; width: 100%; height: 100%; }
-  .portrait img { width: 90%; height: auto; margin: 0; }
+  .portrait img { width: 96%; height: auto; margin: 0; transform: translateX(-1.5%); }
   .scroll-progress { position: fixed; z-index: 12; right: 0; bottom: auto; left: 0; width: auto; height: 2px; }
   .scroll-progress::after { transform: scaleX(var(--scroll-progress, 0)); transform-origin: left; }
   .content { padding: 0 24px 22px; }
